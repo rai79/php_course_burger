@@ -1,0 +1,17 @@
+{
+    "name": "rai79/lib",
+    "description": "Library example",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Alexey Rudel",
+            "email": "rai79@mail.ru"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0",
+        "twig/twig": "^2.4",
+        "intervention/image": "^2.4"
+    }
+}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Список зарегистрирванных пользователей и заказов{% endblock %}
+{% block user_list %}
+<p class="admin-title">Список пользователей</p>
+    <table class="admin-table">
+        <tr>
+            <th>ID пользователя</th>
+            <th>Имя пользователя</th>
+            <th>email</th>
+            <th>Телефон</th>
+        </tr>
+        {% for user in data['users'] %}
+        <tr>
+            <td>{{user['user_id']}}</td>
+            <td>{{user['user_name']}}</td>
+            <td>{{user['email']}}</td>
+            <td>{{user['phone']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<p class="admin-title">Список заказов</p>
+    <table class="admin-table">
+        <tr>
+            <th>ID заказа</th>
+            <th>ID заказчика</th>
+            <th>Адрес заказа</th>
+        </tr>
+        {% for order in data['orders'] %}
+        <tr>
+            <td>{{order['order_id']}}</td>
+            <td>{{order['user_id']}}</td>
+            <td>ул.{{order['street']}} д.{{order['home']}}, корп.{{order['part']}}, кв.{{order['appt']}}, этаж {{order['floor']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

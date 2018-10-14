@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../css/vendors.min.css">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <style type="text/css">
+        .admin{
+            background: url(../img/bg/best.jpg);
+            background-repeat: repeat;
+            background-size: cover;
+            text-align: center;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            background-position: 50%;
+        }
+        .admin-table{
+            font-size: 14px;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        td,th {
+            border: 2px solid black;
+            padding: 0 20px;
+        }
+        .admin-title{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="admin">
+<div class="wrapper">
+    <div class="maincontent">
+        <section>
+            <div class="container">
+                <div class="section__title section__title_black">
+                    {% block user_list %}
+                    {% endblock %}
+                    {% block order_list %}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
